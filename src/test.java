@@ -10,9 +10,9 @@ class Question extends Questionlist{
 	      this.description = desc;
 	      list =new ArrayList();
 	   }
-	   public void addquestion(Questionlist c) {
-		   list.add(c);
-		   }
+	   public void addQuestion(Questionlist q) {
+		   list.add(q);
+	   }
 	   public void print() {
 	      System.out.println(description);
 	      for(Questionlist q:list)  
@@ -28,7 +28,9 @@ class Leaf extends Questionlist{
 }
 public class test {
  public static void main(String[] args) {
-	 
-	
+	 Question q=new Question("1+1=?");
+	 Questionlist q1 =new Question("5*8=?");
+	 q.addQuestion(q1);
+	 q.print();
 	 }
 }
