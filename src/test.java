@@ -1,5 +1,5 @@
 abstract class Questionlist{
-	String desc;
+	
 	abstract void print();
 }
 class Question extends Questionlist{
@@ -9,9 +9,11 @@ class Question extends Questionlist{
 	   }
 	  
 	   public void print() {
-	      System.out.println(desc);
-	   }      
+	      System.out.println(description);
+	   }
+	  
 }
+
 class Leaf extends Questionlist{
 	void print(){
 		
@@ -19,6 +21,7 @@ class Leaf extends Questionlist{
 }
 public class test {
  public static void main(String[] args) {
-  
- }
+	 Questionlist q1=new  Question("1+1=?");
+	 q1.print();
+	 }
 }
